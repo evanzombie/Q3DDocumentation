@@ -1,0 +1,10 @@
+{
+	"docs": {
+		"Overview": ["doc1"],
+		"Articles": ["doc2"],
+		"Use Cases ": ["doc3"]
+	},
+	"docs-other": {
+		"First Category": ["doc4", "doc5"]
+	}
+}
