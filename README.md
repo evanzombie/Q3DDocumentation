@@ -1,2 +1,3 @@
 # Q3DDocumentation
-Documentation for the UI Subsystem for Quantum 3D Project
+
+Documentation for the UI Subsystem of Quantum 3D Project
