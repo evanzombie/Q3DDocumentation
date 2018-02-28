@@ -3,9 +3,9 @@
   "localized-strings": {
     "next": "Next",
     "previous": "Previous",
-    "tagline": "A website for documentation",
+    "tagline": "The Quantum3D BlackBird API lets you write simple, fast and quality type safe code while leveraging both the UI & Unity3D ecosystems.",
     "doc1": "Overview",
-    "Getting Started": "Getting Started",
+    "Quickstart": "Quickstart",
     "doc2": "document number 2",
     "doc3": "This is document number 3",
     "doc4": "Other Document",

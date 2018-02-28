@@ -39,7 +39,7 @@ class Button extends React.Component {
 }
 
 Button.defaultProps = {
-  target: '_self',
+  target: '_self'
 };
 
 const SplashContainer = props => (
@@ -81,7 +81,7 @@ class HomeSplash extends React.Component {
           <ProjectTitle />
           <PromoSection>
             <Button href="#try">Try It Out</Button>
-            <Button href={docUrl('doc1.html', language)}>Example Link</Button>
+            <Button href={docUrl('doc1.html', language)}>Overview</Button>
             <Button href={docUrl('doc2.html', language)}>Example Link 2</Button>
           </PromoSection>
         </div>
@@ -91,10 +91,7 @@ class HomeSplash extends React.Component {
 }
 
 const Block = props => (
-  <Container
-    padding={['bottom', 'top']}
-    id={props.id}
-    background={props.background}>
+  <Container padding={['bottom', 'top']} id={props.id} background={props.background}>
     <GridBlock align="center" contents={props.children} layout={props.layout} />
   </Container>
 );
@@ -103,26 +100,30 @@ const Features = props => (
   <Block layout="fourColumn">
     {[
       {
-        content: 'This is the content of my feature',
-        image: imgUrl('docusaurus.svg'),
+        content: 'Write code using Quantum API to control objects, scenes and implement game logic.',
+        // image: imgUrl('docusaurus.svg'),
         imageAlign: 'top',
-        title: 'Feature One',
+        title: 'Asset Implementation'
       },
       {
-        content: 'The content of my second feature',
-        image: imgUrl('docusaurus.svg'),
+        content: 'Simple, small and blazing fast build workflow. No more configuration debugging!',
+        // image: imgUrl('docusaurus.svg'),
         imageAlign: 'top',
-        title: 'Feature Two',
+        title: 'Lean Developer Experience'
       },
+      {
+        content: 'Lightweight and adaptable community driven base for agile development.',
+        // image: imgUrl('docusaurus.svg'),
+        imageAlign: 'top',
+        title: 'Playground for Future Development'
+      }
     ]}
   </Block>
 );
 
 const FeatureCallout = props => (
-  <div
-    className="productShowcaseSection paddingBottom"
-    style={{textAlign: 'center'}}>
-    <h2>Feature Callout</h2>
+  <div className="productShowcaseSection paddingBottom" style={{ textAlign: 'center' }}>
+    <h2>Quickstart</h2>
     <MarkdownBlock>These are features of this project</MarkdownBlock>
   </div>
 );
@@ -134,8 +135,8 @@ const LearnHow = props => (
         content: 'Talk about learning how to use this',
         image: imgUrl('docusaurus.svg'),
         imageAlign: 'right',
-        title: 'Learn How',
-      },
+        title: 'Learn How'
+      }
     ]}
   </Block>
 );
@@ -147,8 +148,8 @@ const TryOut = props => (
         content: 'Talk about trying this out',
         image: imgUrl('docusaurus.svg'),
         imageAlign: 'left',
-        title: 'Try it Out',
-      },
+        title: 'Try it Out'
+      }
     ]}
   </Block>
 );
@@ -160,8 +161,8 @@ const Description = props => (
         content: 'This is another description of how this project is useful',
         image: imgUrl('docusaurus.svg'),
         imageAlign: 'right',
-        title: 'Description',
-      },
+        title: 'Description'
+      }
     ]}
   </Block>
 );

@@ -16,11 +16,12 @@ const users = [
 ];
 
 const siteConfig = {
-  title: 'Documentation Site' /* title for your website */,
-  tagline: 'A website for documentation',
-  url: 'https://facebook.github.io' /* your website url */,
+  title: 'BlackBird API' /* title for your website */,
+  tagline:
+    'The Quantum3D BlackBird API lets you write simple, fast and quality type safe code while leveraging both the UI & Unity3D ecosystems.',
+  url: 'http://quantum3d.com/' /* your website url */,
   baseUrl: '/test-site/' /* base url for your project */,
-  projectName: 'test-site',
+  projectName: 'Documentation',
   headerLinks: [
     { doc: 'doc1', label: 'Docs' },
     { doc: 'doc4', label: 'API' },

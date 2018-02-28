@@ -1,14 +1,14 @@
 ---
 id: doc1
 title: Overview
-sidebar_label: Getting Started
+sidebar_label: Quickstart
 ---
 
-Check the [documentation](https://docusaurus.io) for how to use Docusaurus.
+<!-- Check the [documentation](https://docusaurus.io) for how to use Docusaurus. -->
 
-## Lorem
+## Quickstart
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus elementum massa eget nulla aliquet sagittis. Proin odio tortor, vulputate ut odio in, ultrices ultricies augue. Cras ornare ultrices lorem malesuada iaculis. Etiam sit amet libero tempor, pulvinar mauris sed, sollicitudin sapien.
+Use sample code here , Examples - use sample screenshot
 
 ## Mauris In Code
 
