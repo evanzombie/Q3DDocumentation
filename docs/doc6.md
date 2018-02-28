@@ -8,7 +8,6 @@ The prefab contains two standard UI boxes:
 1. Alert Box
 2. Info Box
 
-![]()
 
 ## Toggle: 
 
@@ -53,7 +52,7 @@ Find the *AlertBox.prefab* file in the Plugins folder, and drag it into your sce
 The prefab has added the AlertBox.cs component already. You just need to include the AlertBox.cs script inside your project. 
  
 
-![alt text](https://media.giphy.com/media/g4Xpd5qdTASqAxTUGg/giphy.gif) 
+![alt text](../img/alertbox01.gif) 
 
 
 
@@ -76,11 +75,12 @@ public void OnDrag (PointerEventData data) {
 			Vector3 offsetToOriginal = localPointerPosition - pointerOffset;
 			panelRectTransform.localPosition = localPointerPosition - pointerOffset;
 		}
-
+	
+		// Stick panel to area of parent
 		StickToWindow ();
 	}
 
-// Stick panel to area of parent
+// The AlertDrag.StickToWindow() function will make your boxes stick to a predefined area limit.
 	void StickToWindow () {
 		Vector3 pos = panelRectTransform.localPosition;
 
@@ -97,9 +97,8 @@ public void OnDrag (PointerEventData data) {
 
 **How to use**:
 
-Find the *AlertBox.prefab* file in the Plugins folder, and drag it into your scene. By adjusting the scale settings inside Inspector, your will get the standard alert box.  
+Find the *InfoBox.prefab* file in the Plugins folder, and drag it into your scene. By adjusting the scale settings inside Inspector, your will get the standard info box.  
 
-The prefab has added the AlertBox.cs component already. You just need to include the AlertBox.cs script inside your project. 
- 
+The prefab has added the AlertDrag.cs component already. You just need to include the AlertDrag.cs script inside your project. 
 
-![alt text](https://media.giphy.com/media/1etWtS24uzbGOwmDn3/giphy.gif) 
+![alt text](../img/alertbox02.gif) 
