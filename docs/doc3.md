@@ -28,15 +28,15 @@ These are the APIs for hand gestures. The developers can capture the users' touc
 Initiate the Gestures Object by calling the API function. Then setup the delegate method. When a user taps the screen, the delegate method set by OnTap(delegate method) will be call, anything the developer puts inside this delegate method will be executed.
 
 ~~~~
-void Awake () {
-// Don`t forget to add the namespace before the Gestures class
-InputPrism.Gestures.OnTap (tapped);
-}
+	void Awake () {
+	// Don`t forget to add the namespace before the Gestures class
+	InputPrism.Gestures.OnTap (tapped);
+	}
 
-public void tapped() {
-// Do something here
-// Like: robotAnimation.SetTrigger (kick);
-}
+	public void tapped() {
+	// Do something here
+	// Like: robotAnimation.SetTrigger (kick);
+	}
 ~~~~
 
 ## Stylus:

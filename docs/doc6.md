@@ -3,32 +3,22 @@ id: doc6
 title: Alert and Dialog Boxes
 ---
 
-# Toggle: 
+## Toggle: 
 
-The toggle function 
+The toggle function is used to handle display and hide in the user iterface.
 
-## Hands Gestures:
+**Display and Hide:**
 
-**Hands Gestures APIs:**
+- AlertBox.ShowAlert();
+- AlertBox.HideAlert();
+- AlertBox.ToggleAlert(); 
 
-These are the APIs for hand gestures. The developers can capture the users' touches, and configure the response.
-
-- Gestures.OnTap(Delegate method);
-- Gestures.OnSwipe(Delegate method);
-- Gestures.On9AxisSwipeLeft(Delegate method);
-- Gestures.On9AxisSwipeRight(Delegate method);
-- Gestures.On9AxisSwipeUp(Delegate method);
-- Gestures.On9AxisSwipeDown(Delegate method);
-- Gestures.WhilePinching(Delegate method);
-- Gestures.WhileStretching(Delegate method);
-- Gestures.WhileTwisting(Delegate method);
-
-**Example**:
-
-Initiate the Gestures Object by calling the API function. Then setup the delegate method. When a user taps the screen, the delegate method set by OnTap(delegate method) will be call, anything the developer puts inside this delegate method will be executed.
+![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
 
 ~~~~
-public GameObject Panel; 
+public class AlertBox : MonoBehaviour 
+{
+	public GameObject Panel; 
 
 	//Hide Alert
 	public void HideAlert()
@@ -47,7 +37,13 @@ public GameObject Panel;
 	{
 		Panel.SetActive(!Panel.activeSelf);
 	}
+}
 ~~~~
+ 
+
+**Example**:
+
+Initiate the Gestures Object by calling the API function. Then setup the delegate method. When a user taps the screen, the delegate method set by OnTap(delegate method) will be call, anything the developer puts inside this delegate method will be executed.
 
 ## Stylus:
 **Stylus APIs:**
