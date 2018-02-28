@@ -1,7 +1,14 @@
 ---
 id: doc6
-title: Alert and Dialog Boxes
+title: Alert and Info Boxes
 ---
+## Standard UI:
+
+The prefab contains two standard UI boxes:
+1. Alert Box
+2. Info Box
+
+![]()
 
 ## Toggle: 
 
@@ -12,8 +19,6 @@ The toggle function is used to handle display and hide in the user iterface.
 - AlertBox.ShowAlert();
 - AlertBox.HideAlert();
 - AlertBox.ToggleAlert(); 
-
-![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
 
 ~~~~
 public class AlertBox : MonoBehaviour 
@@ -41,29 +46,60 @@ public class AlertBox : MonoBehaviour
 ~~~~
  
 
-**Example**:
+**How to use**:
 
-Initiate the Gestures Object by calling the API function. Then setup the delegate method. When a user taps the screen, the delegate method set by OnTap(delegate method) will be call, anything the developer puts inside this delegate method will be executed.
+Find the *AlertBox.prefab* file in the Plugins folder, and drag it into your scene. By adjusting the scale settings inside Inspector, your will get the standard alert box.  
 
-## Stylus:
-**Stylus APIs:**
+The prefab has added the AlertBox.cs component already. You just need to include the AlertBox.cs script inside your project. 
+ 
 
-Similar to Hands Gestures, Stylus has the same setup. Below are the APIs supported.
+![alt text](https://media.giphy.com/media/g4Xpd5qdTASqAxTUGg/giphy.gif) 
 
-- Pointer.OnTap(Delegate method);
-- Pointer.WhilePush(Delegate method);
 
-**Example**:
 
-The usage is just like Hands Gestures.
+## Drag:
+
+The drag function is used to handle window dragging. 
+
+**Drag and StickToWindow:**
+
+- AlertDrag.OnDrag(PointerEventData data);
+- AlertDrag.StickToWindow(); 
+  
 ~~~~
-void Awake () {
-// Don`t forget to add the namespace before the Gestures class
-InputPrism.Pointer.WhilePressing (pressing);
-}
+public void OnDrag (PointerEventData data) { 
+		if (panelRectTransform == null)
+			return;
 
-public void pressing() {
-// Do something here
-// Like: robotAnimation.SetTrigger (crouch);
-}
+		Vector2 localPointerPosition;
+		if (RectTransformUtility.ScreenPointToLocalPointInRectangle (canvasRectTransform, data.position, data.pressEventCamera, out localPointerPosition)) {
+			Vector3 offsetToOriginal = localPointerPosition - pointerOffset;
+			panelRectTransform.localPosition = localPointerPosition - pointerOffset;
+		}
+
+		StickToWindow ();
+	}
+
+// Stick panel to area of parent
+	void StickToWindow () {
+		Vector3 pos = panelRectTransform.localPosition;
+
+		Vector3 minPosition = canvasRectTransform.rect.min - panelRectTransform.rect.min;
+		Vector3 maxPosition = canvasRectTransform.rect.max - panelRectTransform.rect.max;
+
+		pos.x = Mathf.Clamp (panelRectTransform.localPosition.x, minPosition.x, maxPosition.x);
+		pos.y = Mathf.Clamp (panelRectTransform.localPosition.y, minPosition.y, maxPosition.y);
+
+		panelRectTransform.localPosition = pos;
+	}
 ~~~~
+
+
+**How to use**:
+
+Find the *AlertBox.prefab* file in the Plugins folder, and drag it into your scene. By adjusting the scale settings inside Inspector, your will get the standard alert box.  
+
+The prefab has added the AlertBox.cs component already. You just need to include the AlertBox.cs script inside your project. 
+ 
+
+![alt text](https://media.giphy.com/media/1etWtS24uzbGOwmDn3/giphy.gif) 
