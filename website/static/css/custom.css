@@ -28,3 +28,10 @@
 	margin: auto;
 	margin-top: 0.7em;
 }
+.homeSplashFade{
+	background-image: url("../img/tech1.jpg")   ; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}

@@ -1,12 +1,12 @@
 ---
 id: doc1
 title: Overview
-sidebar_label: Quickstart
+sidebar_label: Get started
 ---
 
 <!-- Check the [documentation](https://docusaurus.io) for how to use Docusaurus. -->
 
-## Quickstart
+## Get started
 
 Use sample code here , Examples - use sample screenshot
 

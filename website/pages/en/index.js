@@ -80,9 +80,9 @@ class HomeSplash extends React.Component {
         <div className="inner">
           <ProjectTitle />
           <PromoSection>
-            <Button href="#try">Try It Out</Button>
-            <Button href={docUrl('doc1.html', language)}>Overview</Button>
-            <Button href={docUrl('doc2.html', language)}>Example Link 2</Button>
+            {/* <Button href="#try">Try It Out</Button> */}
+            <Button href={docUrl('doc1.html', language)}>Get Started</Button>
+            <Button href={docUrl('doc2.html', language)}>Documentation and APIs</Button>
           </PromoSection>
         </div>
       </SplashContainer>
@@ -101,19 +101,19 @@ const Features = props => (
     {[
       {
         content: 'Write code using Quantum API to control objects, scenes and implement game logic.',
-        // image: imgUrl('docusaurus.svg'),
+         image: imgUrl('asset.png'),
         imageAlign: 'top',
         title: 'Asset Implementation'
       },
       {
         content: 'Simple, small and blazing fast build workflow. No more configuration debugging!',
-        // image: imgUrl('docusaurus.svg'),
+         image: imgUrl('lean.png'),
         imageAlign: 'top',
         title: 'Lean Developer Experience'
       },
       {
         content: 'Lightweight and adaptable community driven base for agile development.',
-        // image: imgUrl('docusaurus.svg'),
+         image: imgUrl('future.png'),
         imageAlign: 'top',
         title: 'Playground for Future Development'
       }
@@ -206,11 +206,11 @@ class Index extends React.Component {
         <HomeSplash language={language} />
         <div className="mainContainer">
           <Features />
-          <FeatureCallout />
+            {/*  <FeatureCallout />  */}  
           <LearnHow />
-          <TryOut />
-          <Description />
-          <Showcase language={language} />
+            {/* <TryOut />   
+             <Description />  
+              <Showcase language={language} /> */} 
         </div>
       </div>
     );

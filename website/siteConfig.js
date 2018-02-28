@@ -18,15 +18,15 @@ const users = [
 const siteConfig = {
   title: 'BlackBird API' /* title for your website */,
   tagline:
-    'The Quantum3D BlackBird API lets you write simple, fast and quality type safe code while leveraging both the UI & Unity3D ecosystems.',
+    'The Quantum3D BlackBird API lets you write simple, fast and quality type safe code while leveraging both the UI & Unity3D ecosystems. Join a community of developers building with Quantum.',
   url: 'http://quantum3d.com/' /* your website url */,
   baseUrl: '/test-site/' /* base url for your project */,
   projectName: 'Documentation',
   headerLinks: [
     { doc: 'doc1', label: 'Docs' },
-    { doc: 'doc4', label: 'API' },
+    // { doc: 'doc4', label: 'API' },
     { page: 'help', label: 'Help' },
-    { blog: true, label: 'Blog' }
+    // { blog: true, label: 'Blog' }
   ],
   users,
   /* path to images for header/footer */

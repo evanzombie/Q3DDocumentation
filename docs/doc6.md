@@ -1,11 +1,11 @@
 ---
-id: doc3
-title: Gestures
+id: doc6
+title: Alert and Dialog Boxes
 ---
 
-# Namespace: InputPrism
+# Show and Hide: 
 
-InputPrism is the namespace for all Quantum3D user input capture classes. User input can be hand gestures on the Mobile Phone, pressing down of an Apple pencil or air tap on the Hololens.
+The toggle function 
 
 ## Hands Gestures:
 
@@ -28,15 +28,25 @@ These are the APIs for hand gestures. The developers can capture the users' touc
 Initiate the Gestures Object by calling the API function. Then setup the delegate method. When a user taps the screen, the delegate method set by OnTap(delegate method) will be call, anything the developer puts inside this delegate method will be executed.
 
 ~~~~
-void Awake () {
-// Don`t forget to add the namespace before the Gestures class
-InputPrism.Gestures.OnTap (tapped);
-}
+public GameObject Panel; 
 
-public void tapped() {
-// Do something here
-// Like: robotAnimation.SetTrigger (kick);
-}
+	//Hide Alert
+	public void HideAlert()
+	{
+		Panel.gameObject.SetActive (false);
+	}
+
+	//Show Alert
+	public void ShowAlert()
+	{
+		Panel.gameObject.SetActive (true);
+	}
+
+	//Show or hide according to status 
+	public void ToggleAlert()
+	{
+		Panel.SetActive(!Panel.activeSelf);
+	}
 ~~~~
 
 ## Stylus:
