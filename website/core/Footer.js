@@ -23,7 +23,7 @@ class Footer extends React.Component {
     return (
       <footer className="nav-footer" id="footer">
         <section className="sitemap">
-          <a href={this.props.config.baseUrl} className="nav-home">
+          <a href={this.props.config.baseUrl} className="nav-home" style={{ visibility:'hidden' }}>
             {this.props.config.footerIcon && (
               <img
                 src={this.props.config.baseUrl + this.props.config.footerIcon}
@@ -55,8 +55,8 @@ class Footer extends React.Component {
               target="_blank">
               Stack Overflow
             </a>
-            <a href="https://discordapp.com/">Project Chat</a>
-            <a href="https://twitter.com/" target="_blank">
+           {/* <a href="https://discordapp.com/">Project Chat</a> */} 
+            <a href="https://twitter.com/Quantum3D" target="_blank">
               Twitter
             </a>
           </div>
@@ -77,16 +77,27 @@ class Footer extends React.Component {
           </div>
         </section>
 
+      <a href="http://quantum3d.com/" target="_blank" className="fbOpenSource">
+            {this.props.config.footerIcon && (
+              <img
+                src={this.props.config.baseUrl + this.props.config.footerIcon}
+                alt={this.props.config.title}
+                width="300"
+                height="58"
+              />
+            )}
+          </a>
         <a
-          href="https://code.facebook.com/projects/"
+          href="http://quantum3d.com/"
           target="_blank"
           className="fbOpenSource">
-          <img
+        {/* <img
             src={this.props.config.baseUrl + 'img/oss_logo.png'}
             alt="Facebook Open Source"
             width="170"
             height="45"
           />
+        */} 
         </a>
         <section className="copyright">
           Copyright &copy; {currentYear} Quantum3D

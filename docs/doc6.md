@@ -3,7 +3,7 @@ id: doc6
 title: Alert and Dialog Boxes
 ---
 
-# Show and Hide: 
+# Toggle: 
 
 The toggle function 
 

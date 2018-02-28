@@ -77,12 +77,12 @@ class HomeSplash extends React.Component {
     return (
       <SplashContainer>
         <Logo img_src={imgUrl('docusaurus.svg')} />
-        <div className="inner">
+        <div className="inner  ">
           <ProjectTitle />
           <PromoSection>
             {/* <Button href="#try">Try It Out</Button> */}
-            <Button href={docUrl('doc1.html', language)}>Get Started</Button>
-            <Button href={docUrl('doc2.html', language)}>Documentation and APIs</Button>
+            <a href={docUrl('doc1.html', language)} className="whiteFont">Get Started</a>
+            <a href={docUrl('doc2.html', language)} className="whiteFont">Documentation and APIs</a>
           </PromoSection>
         </div>
       </SplashContainer>
@@ -167,6 +167,15 @@ const Description = props => (
   </Block>
 );
 
+const NewPanel = props =>(
+  <div className = "mycolor">
+    <p className="bgSize"  >INSPIRATION TO GET YOU STARTED</p>
+    <p>Discover what's possible with our API</p>
+    <a href="#" className="moreBtn">Learn More</a>
+  </div>
+)
+
+
 const Showcase = props => {
   if ((siteConfig.users || []).length === 0) {
     return null;
@@ -206,8 +215,9 @@ class Index extends React.Component {
         <HomeSplash language={language} />
         <div className="mainContainer">
           <Features />
-            {/*  <FeatureCallout />  */}  
-          <LearnHow />
+          <NewPanel />
+            {/*  <FeatureCallout />   
+          <LearnHow className="mycolor" />
             {/* <TryOut />   
              <Description />  
               <Showcase language={language} /> */} 
