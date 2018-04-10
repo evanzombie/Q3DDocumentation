@@ -8,7 +8,12 @@ sidebar_label: Get started
 
 ## Get started
 
-Use sample code here , Examples - use sample screenshot
+The Quantum3D API is organised around library based API principles - each resource has a unique function that is used to specify the action to perform on that resource.
+
+In order to write or modify an application for Quantum, you should use the available full- featured library asset package from the asset store.
+
+Before you get started, please ensure you familiarize yourself with the API's signature.
+
 <!-- 
 ## Mauris In Code
 
