@@ -2,27 +2,33 @@
 id: doc6
 title: Alert and Info Boxes
 ---
+
 ## Standard UI:
 
 The prefab contains two standard UI boxes:
+
 1. Alert Box
 2. Info Box
 
-
-## Toggle: 
+## Toggle:
 
 The toggle function is used to handle display and hide in the user iterface.
 
 **Display and Hide:**
 
-- AlertBox.ShowAlert();
-- AlertBox.HideAlert();
-- AlertBox.ToggleAlert(); 
+* AlertBox.ShowAlert();
+* AlertBox.HideAlert();
+* AlertBox.ToggleAlert();
 
-~~~~
-public class AlertBox : MonoBehaviour 
+```
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
+
+public class AlertBox : MonoBehaviour
 {
-	public GameObject Panel; 
+	public GameObject Panel;
 
 	//Hide Alert
 	public void HideAlert()
@@ -36,37 +42,38 @@ public class AlertBox : MonoBehaviour
 		Panel.gameObject.SetActive (true);
 	}
 
-	//Show or hide according to status 
+	//Show or hide according to status
 	public void ToggleAlert()
 	{
 		Panel.SetActive(!Panel.activeSelf);
 	}
 }
-~~~~
- 
+```
 
 **How to use**:
 
-Find the *AlertBox.prefab* file in the Plugins folder, and drag it into your scene. By adjusting the scale settings inside Inspector, your will get the standard alert box.  
+Find the _AlertBox.prefab_ file in the Plugins folder, and drag it into your scene. By adjusting the scale settings inside Inspector, your will get the standard alert box.
 
-The prefab has added the AlertBox.cs component already. You just need to include the AlertBox.cs script inside your project. 
- 
+The prefab has added the AlertBox.cs component already. You just need to include the AlertBox.cs script inside your project.
 
-![alt text](../img/alertbox01.gif) 
-
-
+![alt text](../img/alertbox01.gif)
 
 ## Drag:
 
-The drag function is used to handle window dragging. 
+The drag function is used to handle window dragging.
 
 **Drag and StickToWindow:**
 
-- AlertDrag.OnDrag(PointerEventData data);
-- AlertDrag.StickToWindow(); 
-  
-~~~~
-public void OnDrag (PointerEventData data) { 
+* AlertDrag.OnDrag(PointerEventData data);
+* AlertDrag.StickToWindow();
+
+```
+using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.EventSystems;
+using System.Collections;
+
+public void OnDrag (PointerEventData data) {
 		if (panelRectTransform == null)
 			return;
 
@@ -75,7 +82,7 @@ public void OnDrag (PointerEventData data) {
 			Vector3 offsetToOriginal = localPointerPosition - pointerOffset;
 			panelRectTransform.localPosition = localPointerPosition - pointerOffset;
 		}
-	
+
 		// Stick panel to area of parent
 		StickToWindow ();
 	}
@@ -92,13 +99,12 @@ public void OnDrag (PointerEventData data) {
 
 		panelRectTransform.localPosition = pos;
 	}
-~~~~
-
+```
 
 **How to use**:
 
-Find the *InfoBox.prefab* file in the Plugins folder, and drag it into your scene. By adjusting the scale settings inside Inspector, your will get the standard info box.  
+Find the _InfoBox.prefab_ file in the Plugins folder, and drag it into your scene. By adjusting the scale settings inside Inspector, your will get the standard info box.
 
-The prefab has added the AlertDrag.cs component already. You just need to include the AlertDrag.cs script inside your project. 
+The prefab has added the AlertDrag.cs component already. You just need to include the AlertDrag.cs script inside your project.
 
-![alt text](../img/alertbox02.gif) 
+![alt text](../img/alertbox02.gif)

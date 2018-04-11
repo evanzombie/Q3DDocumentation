@@ -2,7 +2,7 @@
 	"docs": {
 		"Overview": ["doc1"],
 		"Documentation": ["doc2"],
-		"APIs": ["doc3","doc6"]
+		"APIs": ["doc3", "doc6", "doc7", "doc8", "doc_progressbar"]
 	},
 	"docs-other": {
 		"First Category": ["doc4", "doc5"]
