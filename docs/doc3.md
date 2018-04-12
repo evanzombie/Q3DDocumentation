@@ -151,7 +151,36 @@ For Voice Input:
 **Key Classes for voice input**:
 - KeywordManager.cs is the keyword recognizer. Click the GameObject where the KeywordManager has been attached to. Find the Keyword Manager section, and click the Keywords And Responses dropdown. You will see a Keyword is already set there: "Open Communicator". By doing the same, you can define your own voice input.
 
+# Convinient codelets:
+## Camera Zoom In & Out
+~~~~
+// If the camera is orthographic...
+/**
+		var orthographicSize : float
+		Description
+		Camera's half-size when in orthographic mode.
 
+		This is half of the vertical size of the viewing volume. Horizontal viewing size varies depending on viewport's aspect ratio. Orthographic size is ignored when camera is not orthographic
+**/
+if (camera.isOrthoGraphic)
+{
+    camera.orthographicSize += deltaMagnitudeDiff * orthoZoomSpeed;
 
+   	// Make sure the orthographic size never drops below zero.
+  	camera.orthographicSize = Mathf.Max(camera.orthographicSize, 0.1f);
+}
+/**
+		var fieldOfView : float
+		Description
+		The field of view of the camera in degrees.
 
+		This is the vertical field of view; horizontal FOV varies depending on the viewport's aspect ratio. Field of view is ignored when camera is orthographic
+**/
+else
+{
+    camera.fieldOfView += deltaMagnitudeDiff * perspectiveZoomSpeed;
 
+   	// Clamp the field of view to make sure it's between 0 and 180.
+   	camera.fieldOfView = Mathf.Clamp(camera.fieldOfView, 0.1f, 179.9f);
+}
+~~~~
