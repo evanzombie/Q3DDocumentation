@@ -8,6 +8,7 @@
 <url> <loc>http://quantum3d.com/blog/2017/09/25/testing-rss.html</loc> <changefreq>weekly</changefreq> <priority>0.3</priority> </url>
 <url> <loc>http://quantum3d.com/blog/2017/04/10/blog-post-two.html</loc> <changefreq>weekly</changefreq> <priority>0.3</priority> </url>
 <url> <loc>http://quantum3d.com/blog/2016/03/11/blog-post.html</loc> <changefreq>weekly</changefreq> <priority>0.3</priority> </url>
+<url> <loc>http://quantum3d.com/docs/doc_hololens.html</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="http://quantum3d.com/docs/doc_hololens.html" /> </url>
 <url> <loc>http://quantum3d.com/docs/doc_progressbar.html</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="http://quantum3d.com/docs/doc_progressbar.html" /> </url>
 <url> <loc>http://quantum3d.com/docs/doc1.html</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="http://quantum3d.com/docs/doc1.html" /> </url>
 <url> <loc>http://quantum3d.com/docs/doc2.html</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="http://quantum3d.com/docs/doc2.html" /> </url>

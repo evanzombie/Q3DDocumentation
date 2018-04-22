@@ -126,15 +126,22 @@ const Features = props => (
 );
 
 const FeatureCallout = props => (
-  <div className="productShowcaseSection paddingBottom" style={{ textAlign: "center" }}>
-    <h2>Email List</h2>
+  <div className="productShowcaseSection paddingBottom" style={{ textAlign: "center", paddingBottom: " 40px" }}>
+    <h2>Sign Up Here to Join The Developer List</h2>
+    <p>Sign up to receive new announcements, product release dates, and more.</p>
     <div>
       <div class="grid">
         <div class="grid__col--12">
           <form id="contact-form" method="post" action="send_email.php">
             <label for="inputName">Name</label>
             <input
-              style={{ boxShadow: "none", border: "none", padding: "20px", margin: "10px", fontSize: "15px" }}
+              style={{
+                boxShadow: "none",
+                border: "none",
+                padding: "20px 50px 20px 20px",
+                margin: "10px",
+                fontSize: "15px"
+              }}
               className="form__input"
               id="inputName"
               type="text"
@@ -145,7 +152,13 @@ const FeatureCallout = props => (
             <br />
             <label for="inputEmail">Email</label>
             <input
-              style={{ boxShadow: "none", border: "none", padding: "20px", margin: "10px", fontSize: "15px" }}
+              style={{
+                boxShadow: "none",
+                border: "none",
+                padding: "20px 50px 20px 20px",
+                margin: "10px",
+                fontSize: "15px"
+              }}
               className="form__input"
               id="inputEmail"
               type="email"
@@ -154,11 +167,11 @@ const FeatureCallout = props => (
               required
             />
             <input
-              style={{ color: "black", border: "1px solid", cursor: "pointer" }}
+              style={{ color: "black", border: "1px solid", cursor: "pointer", fontSize: "15px" }}
               className="btn moreBtn"
               id="email-submit-btn"
               type="submit"
-              value="Send"
+              value="JOIN"
               name="emailSubmit"
             />
           </form>
